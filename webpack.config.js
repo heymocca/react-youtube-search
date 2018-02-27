@@ -11,13 +11,16 @@ module.exports = {
             {
                 loader: 'babel-loader',
                 test: /\.js$/,
-                exclude: /node_modules/
+                exclude: /node_modules/,
+                query: {
+                  presets: ['react', 'es2015']
+                }
             }
         ]
     },
     devServer: {
         port: 3000,
-        contentBase: './build',
+        // contentBase: './build',
         inline: true
     }
 }
